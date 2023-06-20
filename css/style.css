@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #035c79;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+table {
+  width: 100%;
+}
+
+.title {
+  font-family: 'Signika Negative', sans-serif;
+  margin: 20px 0;
+  font-size: 50px;
+  text-shadow: 0 0 8px white;
+}
+table thead th {
+  background-color: rgb(49, 165, 150);
+  padding: 5px 0;
+}
+.table th {
+  padding: 5px;
+}
+
+td {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.add_input {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 10px;
+}
+
+.add_input input,
+.search_input input {
+  width: 80%;
+  border-radius: 6px;
+  border: 1px solid;
+}
+
+.add_input input::placeholder {
+  padding: 10px;
+}
+
+.add_input input:focus,
+.search_input input:focus {
+  box-shadow: none;
+  border: 1px solid;
+  outline: 1px solid;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.425);
+}
+.add_input button {
+  width: 15%;
+}
+
+.add_input button {
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  font-size: 18px;
+  text-transform: capitalize;
+  font-weight: 600;
+  position: relative;
+  z-index: 0;
+  border-radius: 30px;
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+}
+
+.add_input button::after {
+  content: '';
+  position: absolute;
+  background-color: #ff0042fa;
+  width: 0%;
+  height: 100%;
+  inset: 0;
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  z-index: -1;
+  border-radius: 30px;
+}
+
+.add_input button:hover {
+  color: black;
+}
+
+.add_input button:hover::after {
+  width: 100%;
+}
+
+table .finish_btn {
+  background-color: rgb(30 146 40 / 80%);
+}
+
+table .finish_btn,
+table .remove_btn {
+  border: none;
+  border-radius: 6px;
+  padding: 0px 10px;
+}
+
+table .finish_btn:hover {
+  box-shadow: 0 0 10px rgb(30 146 40 / 80%);
+}
+
+table .remove_btn {
+  background-color: rgb(232 45 45);
+}
+
+table .remove_btn:hover {
+  box-shadow: 0 0 10px rgb(232 45 45);
+}
+
+table .finish_btn i,
+table .remove_btn i {
+  font-size: 13px;
+  line-height: 24px;
+  color: black;
+}
+table .finish_btn:hover i,
+table .remove_btn:hover i {
+  color: white;
+}
+
+button.remove_done,
+button.return_done {
+  visibility: hidden;
+  padding: 0 10px;
+  border: none;
+  border-radius: 6px;
+}
+
+.finish tr:hover button.remove_done {
+  visibility: visible;
+  background-color: rgb(232 45 45);
+}
+
+.finish tr:hover button.return_done {
+  visibility: visible;
+  background-color: darkmagenta;
+}
+
+button.remove_done:hover {
+  box-shadow: 0 0 10px rgb(232 45 45);
+  color: white;
+}
+
+button.return_done:hover {
+  box-shadow: 0 0 10px darkmagenta;
+  color: white;
+}
